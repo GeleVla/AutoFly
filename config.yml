@@ -1,0 +1,4 @@
+permission: 'hub.fly'
+byDefault: true
+message: '&7Fly is &aenabled&7!'
+# Set message: '' to remove message on join.
