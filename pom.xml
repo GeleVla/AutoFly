@@ -11,7 +11,7 @@
 
     <name>AutoFly</name>
 
-    <description>Simple plugin for auto-fly on join</description>
+    <description>Auto-fly on join with a permission.</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
