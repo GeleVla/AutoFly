@@ -7,6 +7,9 @@ import java.io.File;
 
 public final class AutoFly extends JavaPlugin {
 
+    public AutoFly() {
+    }
+
     @Override
     public void onEnable() {
         this.saveDefaultConfig();

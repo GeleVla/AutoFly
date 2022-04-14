@@ -3,4 +3,4 @@ version: '${project.version}'
 main: com.gelevla.autofly.AutoFly
 api-version: 1.18
 authors: [ GeleVla ]
-description: Simple plugin for auto-fly on join  
+description: Auto-fly on join with a permission.
