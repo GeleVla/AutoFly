@@ -16,8 +16,8 @@ public final class AutoFly extends JavaPlugin {
         new File(this.getDataFolder(), "config.yml");
         String permission = this.getConfig().getString("permission");
         String message = this.getConfig().getString("message");
-        boolean enabledAutoFly = this.getConfig().getBoolean("enabled");
-        this.getServer().getPluginManager().registerEvents(new Listeners(permission, message, enabledAutoFly), this);
+        boolean joinFly = this.getConfig().getBoolean("joininflymode");
+        this.getServer().getPluginManager().registerEvents(new Listeners(permission, message, joinFly), this);
 
         int pluginId = 14925; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);
