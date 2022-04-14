@@ -1,6 +1,7 @@
 package com.gelevla.autofly;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bstats.bukkit.Metrics;
 
 import java.io.File;
 
@@ -12,9 +13,11 @@ public final class AutoFly extends JavaPlugin {
         new File(this.getDataFolder(), "config.yml");
         String permission = this.getConfig().getString("permission");
         String message = this.getConfig().getString("message");
-        boolean byDefault = this.getConfig().getBoolean("byDefault");
-        this.getServer().getPluginManager().registerEvents(new Listeners(permission, message, byDefault), this);
+        boolean enabledAutoFly = this.getConfig().getBoolean("enabled");
+        this.getServer().getPluginManager().registerEvents(new Listeners(permission, message, enabledAutoFly), this);
 
+        int pluginId = 14924; // <-- Replace with the id of your plugin!
+        Metrics metrics = new Metrics(this, pluginId);
     }
 
     @Override

@@ -10,12 +10,12 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 public class Listeners implements Listener{
     private String permission;
     private String message;
-    private boolean byDefault;
+    private boolean enabledAutoFly;
 
-    Listeners(String permission, String message, boolean byDefault) {
+    Listeners(String permission, String message, boolean enabledAutoFly) {
         this.permission = permission;
         this.message = message;
-        this.byDefault = byDefault;
+        this.enabledAutoFly = enabledAutoFly;
     }
 
     @EventHandler
@@ -31,7 +31,7 @@ public class Listeners implements Listener{
     private void setFly(Player player) {
         if (player.hasPermission(this.permission)) {
             player.setAllowFlight(true);
-            if (this.byDefault) {
+            if (this.enabledAutoFly) {
                 player.setFlying(true);
             }
 
